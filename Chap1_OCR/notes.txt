@@ -1,0 +1,8 @@
+bhai albumentations ka pckg errors par error dy ga agr apny scikit-image ki dependency install nhi kri vi. 
+Yani apko yeh vala pckg lazmi install krna hoga sth
+
+pip install scikit-image==0.17.2
+pip install albumentations
+
+Dont install this:
+pip install scikit-image
