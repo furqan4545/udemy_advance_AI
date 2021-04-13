@@ -40,7 +40,7 @@ class CaptchaModel(nn.Module):
         # print(x.size()) 
         x = x.view(bs, x.size(1), -1)
         # print(x.size())
-        x = self.linear_1(x)
+        x = F.relu(self.linear_1(x))
         x = self.drop_1(x)
         # print(x.size()) # here we have 75 time stamps and for 75 timestamps we have 64 valeus. 
         # now we will add lstm gru model. 
