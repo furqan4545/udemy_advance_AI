@@ -42,7 +42,7 @@ class ClassificationDataset:
         # transpose is used to bring the channels dim first and width and height later. 
         image = np.transpose(image, (2, 0, 1)).astype(np.float32)
         return {
-            "image": torch.tensor(image, dtype = torch.float),
+            "images": torch.tensor(image, dtype = torch.float),
             "targets" : torch.tensor(targets, dtype = torch.long),
         }
 
