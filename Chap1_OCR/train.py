@@ -10,7 +10,7 @@ import torch
 import numpy as np
 
 from sklearn import preprocessing 
-from sklearn import model_selection
+from sklearn import model_selection 
 from sklearn import metrics
 
 from model import CaptchaModel
@@ -55,6 +55,7 @@ def run_training():
     # here we r encoding the labels. 
     lbl_enc.fit(targets_flat)
     targets_enc = [lbl_enc.transform(x) for x in targets]
+    # why am I adding 1 here. Watch video. such as [4,5,9,8, 9] --> [5, 6, 10, 9, 10 ] 
     targets_enc = np.array(targets_enc) + 1
     # print(targets_enc)
     # print(np.unique(targets_flat))
